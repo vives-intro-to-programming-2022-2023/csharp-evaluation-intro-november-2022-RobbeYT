@@ -23,7 +23,7 @@ namespace LabradorGoesWoof
             // Resultaat: 14
 
             // TODO [1]: Overloop de `input` string en tel hoe dikwijls je een `B` karakter tegen komt
-            int tell = input.IndexOf('x');
+            
 
 
             // TODO [2]: Laat de methode het resultaat returnen(aantal keer dat er `B` in `input` voorkomt)
@@ -45,6 +45,7 @@ namespace LabradorGoesWoof
 
                 return bark;
             }
+            
             
             
 
