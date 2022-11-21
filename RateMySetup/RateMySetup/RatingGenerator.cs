@@ -20,10 +20,36 @@ namespace RateMySetup
             // - symbol = het symbool dat als "ster" dient gebruikt te worden
 
             // TODO [1]: Maak een string variabel waarin je het resultaat gaat plaatsen
+            string result = ("<_____>");
+
+
+
             // TODO [2]: Bouw de string op volgens het opgegeven formaat (hint: maak gebruik van een loop-structuur)
+            
+            /*for(int i= 0; i < stars; i++)
+            {
+              
+              
+            }
+            if(stars == 5)
+            {
+                return ("<*****>");
+            }
+            else if(stars == 0)
+            {
+                return ("<_____>");
+            }
+            else if (stars == 4)
+            {
+                return ("<!!!!_>");
+            }*/
             // TODO [3]: Geef de resulterende string terug (geen Console.WriteLine hier!)
             // TODO [4]: Uitzondering - Indien maximum 0 is of stars groter is dan maximum dien je als resultaat "<>" terug te geven
 
+             if (maximum == 0 || stars > maximum)
+            {
+                return ("<>");
+            }
             return "";
         }
     }
