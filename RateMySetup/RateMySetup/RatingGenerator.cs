@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks.Sources;
 
 namespace RateMySetup
 {
@@ -20,26 +22,34 @@ namespace RateMySetup
             // - symbol = het symbool dat als "ster" dient gebruikt te worden
 
             // TODO [1]: Maak een string variabel waarin je het resultaat gaat plaatsen
-            string result = ("<_____>");
+            string result = "";
 
 
 
             // TODO [2]: Bouw de string op volgens het opgegeven formaat (hint: maak gebruik van een loop-structuur)
-            
-            for(int i= 0; i < stars; i++)
+
+            if (maximum == 0 || stars > maximum)
             {
-              
+                return ("<>");
+            }
+            
+
+            for (int i= 0; i < stars; i++)
+            {
+                result = result + symbol;
               
             }
+            for(int i= 0; i < maximum - stars; i++)
+            {
+                result = result + '_';
+            }
+            return "<" + result + ">";
             
             // TODO [3]: Geef de resulterende string terug (geen Console.WriteLine hier!)
             // TODO [4]: Uitzondering - Indien maximum 0 is of stars groter is dan maximum dien je als resultaat "<>" terug te geven
 
-             if (maximum == 0 || stars > maximum)
-            {
-                return ("<>");
-            }
-            return "";
+             
+            
         }
     }
 }

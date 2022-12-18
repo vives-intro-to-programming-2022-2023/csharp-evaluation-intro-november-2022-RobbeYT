@@ -37,12 +37,21 @@ namespace LabradorGoesWoof
             }
             else if (input.Length == 60)
             {
-                int barkindex = input.IndexOf('B');
+                //int barkindex = input.IndexOf('B');
 
-                int silinceindex = input.IndexOf('x');
+                //int silinceindex = input.IndexOf('x');
 
-                int bark = (silinceindex + barkindex);
+                //int bark = (silinceindex + barkindex);
 
+                //return bark;
+                int bark = 0;
+                for(int i = 0; i < input.Length; i++)
+                {
+                    if(input[i] == 'B')
+                    {
+                        bark = bark + 1;
+                    }
+                }
                 return bark;
             }
             
